@@ -2404,4 +2404,4 @@ client.on("message", (message) => {
 });  
 
 // THIS  MUST  BE  THIS  WAY
-client.login("NDg2MzE2MzIyNDQ0MTQ4NzQ2.Dm9XLQ.-UM7vmhG97ROfhyx4HBPo5h-bO4");
+client.login(process.env.BOT_TOKEN);
