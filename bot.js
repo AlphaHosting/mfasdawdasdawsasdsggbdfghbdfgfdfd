@@ -35,6 +35,7 @@ const pretty = require('pretty-ms')
         const embed = new Discord.RichEmbed()
         .setColor('00FF01')
         .setAuthor(member.user.tag, member.user.avatarURL)
+	.setThumbnail(member.user.avatarURL)
         .setFooter("User joined ")
         .setTimestamp()
         return wc.sendEmbed(embed);
@@ -45,6 +46,7 @@ client.on("guildMemberRemove", function(member) {
         const embed = new Discord.RichEmbed()
         .setColor('FF0000')
         .setAuthor(member.user.tag, member.user.avatarURL)
+	.setThumbnail(member.user.avatarURL)
         .setFooter("User left ")
         .setTimestamp()
         return wc.sendEmbed(embed);
