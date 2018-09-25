@@ -71,7 +71,7 @@ client.on('voiceStateUpdate', (oldM, newM) => {
          let embed = new Discord.RichEmbed()
          .setAuthor(`${newM.user.tag}`, newM.user.avatarURL)
          .setDescription(`${newM} has muted in server`)
-         .setFooter(`By : ${user}`)
+         .setFooter(`By : ${user.tag}`)
   
          ch.send(embed)
       }
@@ -79,7 +79,7 @@ client.on('voiceStateUpdate', (oldM, newM) => {
          let embed = new Discord.RichEmbed()
          .setAuthor(`${newM.user.tag}`, newM.user.avatarURL)
          .setDescription(`${newM} has unmuted in server`)
-         .setFooter(`By : ${user}`)
+         .setFooter(`By : ${user.tag}`)
          .setTimestamp()
   
          ch.send(embed)
@@ -88,7 +88,7 @@ client.on('voiceStateUpdate', (oldM, newM) => {
          let embed = new Discord.RichEmbed()
          .setAuthor(`${newM.user.tag}`, newM.user.avatarURL)
          .setDescription(`${newM} has deafened in server`)
-         .setFooter(`By : ${user}`)
+         .setFooter(`By : ${user.tag}`)
          .setTimestamp()
   
          ch.send(embed)
@@ -97,7 +97,7 @@ client.on('voiceStateUpdate', (oldM, newM) => {
          let embed = new Discord.RichEmbed()
          .setAuthor(`${newM.user.tag}`, newM.user.avatarURL)
          .setDescription(`${newM} has undeafened in server`)
-         .setFooter(`By : ${user}`)
+         .setFooter(`By : ${user.tag}`)
          .setTimestamp()
   
          ch.send(embed)
