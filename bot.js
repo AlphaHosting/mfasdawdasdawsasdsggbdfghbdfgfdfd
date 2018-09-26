@@ -36,7 +36,10 @@ const pretty = require('pretty-ms')
         .setColor('00FF01')
         .setAuthor(member.user.tag, member.user.avatarURL)
 	.setThumbnail(member.user.avatarURL)
-        .setFooter("User joined ")
+	.addField("User Joined")
+	.addField("Server Members : " [${client.guild.memberCount}],true)
+	.addField("Created At : " client.user.createdAt,true)
+        .setFooter(member.user.tag)
         .setTimestamp()
         return wc.sendEmbed(embed);
 });
@@ -47,7 +50,7 @@ client.on("guildMemberRemove", function(member) {
         .setColor('FF0000')
         .setAuthor(member.user.tag, member.user.avatarURL)
 	.setThumbnail(member.user.avatarURL)
-        .setFooter("User left ")
+	.setDescription("User Left")
         .setTimestamp()
         return wc.sendEmbed(embed);
 });
