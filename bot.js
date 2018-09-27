@@ -31,7 +31,7 @@ const pretty = require('pretty-ms')
 
 
   client.on("guildMemberAdd", function(member) {
-    const wc = member.guild.channels.find("name", "✋welcome✋")
+    const wc = member.guild.channels.find("name", "👉welcome👈")
         const embed = new Discord.RichEmbed()
         .setColor('00FF01')
         .setAuthor(member.user.tag, member.user.avatarURL)
@@ -48,7 +48,7 @@ const pretty = require('pretty-ms')
 
 
 client.on("guildMemberRemove", function(member) {
-    const wc = member.guild.channels.find("name", "✋welcome✋")
+    const wc = member.guild.channels.find("name", "👉welcome👈")
         const embed = new Discord.RichEmbed()
         .setColor('FF0000')
         .setAuthor(member.user.tag, member.user.avatarURL)
@@ -904,7 +904,7 @@ client.on("message", message => {
         }
     });
 client.on("guildMemberAdd", member => {
-let welcomer = member.guild.channels.find("name","welcome");
+let welcomer = member.guild.channels.find("name","👉welcome👈");
       if(!welcomer) return;
       if(welcomer) {
          moment.locale('ar-ly');
