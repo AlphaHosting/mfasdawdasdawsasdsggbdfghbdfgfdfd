@@ -46,6 +46,7 @@ const pretty = require('pretty-ms')
         return wc.sendEmbed(embed);
 });
 
+
 client.on("guildMemberRemove", function(member) {
     const wc = member.guild.channels.find("name", "✋welcome✋")
         const embed = new Discord.RichEmbed()
